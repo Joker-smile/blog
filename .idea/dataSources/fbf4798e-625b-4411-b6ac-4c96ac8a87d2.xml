@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - @localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="blog">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="carshop"/>
+    <schema id="3" name="chuangyi"/>
+    <schema id="4" name="information_schema"/>
+    <schema id="5" name="mysql"/>
+    <schema id="6" name="my_blog"/>
+    <schema id="7" name="performance_schema"/>
+    <schema id="8" name="test"/>
+    <table id="9" parent="1" name="tp_admin"/>
+    <table id="10" parent="1" name="tp_article"/>
+    <table id="11" parent="1" name="tp_cate"/>
+    <table id="12" parent="1" name="tp_links"/>
+    <table id="13" parent="1" name="tp_tags"/>
+    <column id="14" parent="9" name="id">
+      <mandatory>1</mandatory>
+      <data-type>mediumint(9)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="15" parent="9" name="username">
+      <comment>管理员名称</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="16" parent="9" name="password">
+      <comment>管理员密码</comment>
+      <mandatory>1</mandatory>
+      <data-type>char(32)|0</data-type>
+    </column>
+    <key id="17" parent="9" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="18" parent="10" name="id">
+      <comment>文章id</comment>
+      <mandatory>1</mandatory>
+      <data-type>mediumint(9)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="19" parent="10" name="title">
+      <comment>文章标题</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(60)|0</data-type>
+    </column>
+    <column id="20" parent="10" name="author">
+      <comment>文章作者</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="21" parent="10" name="desc">
+      <comment>文章简介</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="22" parent="10" name="keywords">
+      <comment>文章关键词</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="23" parent="10" name="content">
+      <comment>文章内容</comment>
+      <mandatory>1</mandatory>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="24" parent="10" name="pic">
+      <comment>缩略图</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="25" parent="10" name="click">
+      <comment>点击数</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="26" parent="10" name="state">
+      <comment>0:不推荐 1：推荐</comment>
+      <mandatory>1</mandatory>
+      <data-type>tinyint(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="27" parent="10" name="time">
+      <comment>发布时间</comment>
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="28" parent="10" name="cateid">
+      <comment>所属栏目</comment>
+      <mandatory>1</mandatory>
+      <data-type>mediumint(9)|0</data-type>
+    </column>
+    <key id="29" parent="10" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="30" parent="11" name="id">
+      <comment>栏目id</comment>
+      <mandatory>1</mandatory>
+      <data-type>mediumint(9)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="31" parent="11" name="catename">
+      <comment>栏目名称</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <key id="32" parent="11" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="33" parent="12" name="id">
+      <comment>链接id</comment>
+      <mandatory>1</mandatory>
+      <data-type>mediumint(9)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="34" parent="12" name="title">
+      <comment>链接标题</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="35" parent="12" name="url">
+      <comment>链接地址</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(60)|0</data-type>
+    </column>
+    <column id="36" parent="12" name="desc">
+      <comment>链接说明</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="37" parent="12" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="38" parent="13" name="id">
+      <comment>tag标签id</comment>
+      <mandatory>1</mandatory>
+      <data-type>mediumint(9)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="39" parent="13" name="tagname">
+      <comment>tag标签名称</comment>
+      <mandatory>1</mandatory>
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <key id="40" parent="13" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,37 @@
+<div class="sidebar"> 
+	<div class="mypages"><iframe width="250" scrolling="no" height="60" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=1"></iframe></div>
+	   <ul class="mypages">
+		<li><a href="http://t.qq.com/A1020733278" class="my-a my-tqq" target="_blank" rel="nofollow"><span><strong>腾讯微博</strong></span>腾讯微博 »</a></li>
+		<li><a href="http://weibo.com/u/5075649715/home?wvr=5&lf=reg" class="my-a my-weibo" target="_blank" rel="nofollow"><span><strong>新浪微博</strong></span>新浪微博 »</a></li>
+		<li><a href="" class="my-a my-feed" target="_blank" rel="nofollow"><span><strong>关于本人</strong></span>关于本人»</a></li>
+		<li><a href="http://user.qzone.qq.com/1020733278/infocenter?ptsig=8t-CRE75B2ez6**50IhY2V2GquqnxYL4M3pe4vxXmt0_" class="my-a my-theme" target="_blank" rel="nofollow"><span><strong>QQ空间</strong></span>QQ空间 »</a></li>
+	</ul>
+	<div class="widget widget_categories"><h3 class="widget-tit">文章分类</h3>		
+<ul>
+     <volist name="cates" id="vo">
+	<li class="cat-item cat-item-18"><a title="" href="__MODULE__/Cate/index/id/{$vo.id}">{$vo.catename}</a>
+    </li>
+    </volist>
+</ul>
+    </div>
+<div class="widget widget_recent_entries"><h3 class="widget-tit">最新发表</h3>		
+            <ul>
+           
+				<volist name="articles" id="vo">
+				       <li>
+				           <a href="__MODULE__/Article/index/id/{$vo.id}">{$vo.title}</a>
+				       </li>
+				</volist>	
+            </ul>
+		</div>		
+		<div class="widget widget_links"><h3 class="widget-tit">友情链接</h3>
+	<ul class="xoxo blogroll">
+
+   <volist name="links" id="vo">
+         <li>
+              <a target="_blank" rel="friend" href="{$vo.url}">{$vo.title}</a>
+         </li>
+   </volist>
+	</ul>
+</div>
+</div>

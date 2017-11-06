@@ -1,0 +1,20 @@
+<div class="topbar">
+	<div class="inner">
+		<a class="logo" href="__PUBLIC__/images/logo.png" title="简易博客阅读网"></a>
+		<ul class="nav">
+			  <li class="top-ye" style="margin:0px 20px;">
+			     <a href="__MODULE__/Index/index.html">首页</a>
+			  </li>
+		</ul>
+		<ul class="nav" style="margin: 21px -10px;">
+			<volist name="cates" id="vo">
+			  <li <if condition="$current eq $vo['id']">class='current-menu-item'</if> >
+			     <a href="__MODULE__/Cate/index/id/{$vo.id}">{$vo.catename}</a>
+			  </li>
+			</volist>
+		</ul>
+		<ul class="nav topmenu">
+			<li id="menu-item-12460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12460"><a href="__MODULE__/Message/index.html">给我留言</a></li>
+		</ul>
+	</div>
+</div>
